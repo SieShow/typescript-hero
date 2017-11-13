@@ -12,7 +12,7 @@ const sectionKey = 'typescriptHero.codeCompletion';
  */
 export class VscodeCodeCompletionConfig implements CodeCompletionConfig {
     private get workspaceSection(): WorkspaceConfiguration {
-        return workspace.getConfiguration(sectionKey, this.resource);
+        return workspace.getConfiguration(sectionKey, this.resource || null as any);
     }
 
     /**

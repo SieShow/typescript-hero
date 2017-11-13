@@ -12,7 +12,7 @@ const sectionKey = 'typescriptHero.codeOutline';
  */
 export class VscodeCodeOutlineConfig implements CodeOutlineConfig {
     private get workspaceSection(): WorkspaceConfiguration {
-        return workspace.getConfiguration(sectionKey, this.resource);
+        return workspace.getConfiguration(sectionKey, this.resource || null as any);
     }
 
     /**

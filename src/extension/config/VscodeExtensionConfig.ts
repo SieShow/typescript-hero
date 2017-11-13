@@ -29,7 +29,7 @@ export class VscodeExtensionConfig implements ExtensionConfig {
     private codeCompletionConfig: CodeCompletionConfig;
 
     private get workspaceSection(): WorkspaceConfiguration {
-        return workspace.getConfiguration(sectionKey, this.resource);
+        return workspace.getConfiguration(sectionKey, this.resource || null as any);
     }
 
     /**
